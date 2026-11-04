@@ -2,7 +2,7 @@ package the_bank;
 
 public class SavingsAccount extends Account{
 
-    private double interestRate;
+    private final double interestRate;
 
     public SavingsAccount(String holder, double balance, double interestRate) {
         super(holder, balance);

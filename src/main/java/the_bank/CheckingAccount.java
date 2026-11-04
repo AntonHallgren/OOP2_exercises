@@ -2,7 +2,7 @@ package the_bank;
 
 public class CheckingAccount extends Account{
 
-    private double monthlyFee;
+    private final double monthlyFee;
 
     public CheckingAccount(String holder, double balance, double monthlyFee) {
         super(holder, balance);
@@ -11,6 +11,7 @@ public class CheckingAccount extends Account{
 
     @Override
     public void processMonth() {
-        //TODO implement
+        deposit(-monthlyFee);
+        IO.println(String.format("%s: monthly fee charged", getHolder()));
     }
 }
