@@ -4,7 +4,7 @@ package the_bank;
 import java.security.InvalidParameterException;
 
 public abstract class Account {
-    private String holder;
+    private final String holder;
     private double balance;
 
     public Account(String holder, double balance)
