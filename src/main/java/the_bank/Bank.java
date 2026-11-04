@@ -19,11 +19,17 @@ public class Bank {
 
     public void processAllAccounts()
     {
-        //TODO implement
+        for(Account account : accounts)
+        {
+            account.processMonth();
+        }
     }
 
     public void printAllSummaries()
     {
-        //TODO implement
+        for(Account account : accounts)
+        {
+            account.printSummary();
+        }
     }
 }
