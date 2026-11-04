@@ -32,4 +32,15 @@ public class Bank {
             account.printSummary();
         }
     }
+
+    static void main()
+    {
+        Bank bank = new Bank("Lexicon Bank");
+        bank.addAccount(new SavingsAccount("Saver", 1000, 0.02));
+        bank.addAccount(new CheckingAccount("Checker", 500, 25));
+        bank.addAccount(new LoanAccount("Loaner", 5000, 0.03));
+        bank.printAllSummaries();
+        bank.processAllAccounts();
+        bank.printAllSummaries();
+    }
 }
