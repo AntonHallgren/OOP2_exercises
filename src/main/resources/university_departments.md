@@ -6,7 +6,7 @@ Departments has lecturers, they can exist independently
 
 Is there any (direct) relationship between University and Lecturer? Seems like no
 
-I make the assumption that each University has at least one Department, and each Department has at least one Lecturer
+Seems like each University has exactly 3 Departments. I make the assumption that each Department has at least one Lecturer. 
 
 ```mermaid
 classDiagram
@@ -16,7 +16,7 @@ classDiagram
     
     class Lecturer
 
-University "1" *--  "1..*" Department
+University "1" *--  "3" Department
 Department "1" o-- "1..*" Lecturer
 ```
 
