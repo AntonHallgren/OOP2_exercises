@@ -7,6 +7,7 @@ Departments has lecturers, they can exist independently
 Is there any (direct) relationship between University and Lecturer? Seems like no
 
 Seems like each University has exactly 3 Departments. I make the assumption that each Department has at least one Lecturer. 
+I did not notice it at first, but was told that each Lecturer can teach at multiple Departments. 
 
 ```mermaid
 classDiagram
@@ -17,6 +18,6 @@ classDiagram
     class Lecturer
 
 University "1" *--  "3" Department
-Department "1" o-- "1..*" Lecturer
+Department "1..*" o-- "1..*" Lecturer
 ```
 
