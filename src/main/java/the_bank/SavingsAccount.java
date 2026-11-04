@@ -10,7 +10,10 @@ public class SavingsAccount extends Account{
     }
 
     @Override
-    public void processMonth() {
-        //TODO implement
+    public void processMonth()
+    {
+        double interest = getBalance() * interestRate;
+        deposit(interest);
+        IO.println(String.format("%s: interest credited", getHolder()));
     }
 }
