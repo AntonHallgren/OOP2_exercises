@@ -27,6 +27,7 @@ public class Bank {
 
     public void printAllSummaries()
     {
+        IO.println(String.format("Summaries of accounts at %s", name));
         for(Account account : accounts)
         {
             account.printSummary();
