@@ -2,7 +2,7 @@ package the_bank;
 
 public class LoanAccount extends Account{
 
-    private double loanRate;
+    private final double loanRate;
 
     public LoanAccount(String holder, double balance, double loanRate) {
         super(holder, balance);
@@ -11,6 +11,8 @@ public class LoanAccount extends Account{
 
     @Override
     public void processMonth() {
-        //TODO implement
+        double loanInterest = getBalance() * loanRate;
+        deposit(loanInterest);
+        IO.println(String.format("%s: loan interest added", getHolder()));
     }
 }
